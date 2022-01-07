@@ -8,3 +8,11 @@ services:
             - "8080:80"
         volumes:
             - ./app:/usr/local/apache2/htdocs/
+    my-apache-with-php:
+        build:
+            context: .
+            dockerfile: docker/apache-php.docker
+        ports:
+            -   "8081:80"
+        volumes:
+            - ./app:/var/www/html
