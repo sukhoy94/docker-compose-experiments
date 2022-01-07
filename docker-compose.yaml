@@ -1,0 +1,10 @@
+version: '3'
+services:
+    my-apache2:
+        build:
+            context: docker
+            dockerfile: httpd.docker
+        ports:
+            - "8080:80"
+        volumes:
+            - ./app:/usr/local/apache2/htdocs/
