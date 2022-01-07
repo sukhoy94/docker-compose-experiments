@@ -1,7 +1,9 @@
 version: '3'
 services:
     my-apache2:
-        build: .
+        build:
+            context: docker
+            dockerfile: httpd.docker
         ports:
             - "8080:80"
         volumes:
